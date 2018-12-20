@@ -1,6 +1,7 @@
 fun main(args: Array<String>) {
     println("Hello world")
 
+//    Variable try
     val name = "Anik"
     var myAge = 22
     var bigInt: Int = Int.MAX_VALUE
@@ -18,4 +19,7 @@ fun main(args: Array<String>) {
     }
     var letterGrade: Char = 'A'
     println("A is a Char: ${letterGrade is Char}")
+
+//    Casting try
+    
 }
