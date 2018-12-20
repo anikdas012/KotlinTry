@@ -46,4 +46,9 @@ long string"""
     println("Strings Equal: ${str1.equals(str2)}")
     println("Compare A to B: ${"A".compareTo("B")}")
     println("longStr: $longStr")
+    println("2nd Index: ${str1.get(2)}")
+    println("2nd Index: ${str1[2]}")
+    println("Index 2-7: ${str1.subSequence(2,8)}")
+    println("Contains random: ${str1.contains("random")}")
+    println("---------------------------------------------------")
 }
