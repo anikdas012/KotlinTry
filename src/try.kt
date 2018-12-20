@@ -66,4 +66,7 @@ long string"""
     var sqArray = Array(5, { x -> x * x })
     println("sqArray[2]: ${sqArray[2]}")
     var arr2: Array<Int> = arrayOf(1, 2, 3)
+    println("---------------------------------------------------")
+
+    
 }
