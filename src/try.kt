@@ -103,4 +103,8 @@ long string"""
         }
         else -> println("Go to College")
     }
+    println("---------------------------------------------------")
+
+
+    
 }
