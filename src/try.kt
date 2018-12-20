@@ -25,4 +25,22 @@ fun main(args: Array<String>) {
     println("3.14 to Int: "+(3.14.toInt()))
     println("A to Int: ${'A'.toInt()}")
     println("65 to Char: "+ 65.toChar())
+
+
+//    String try
+    val myName = "Anik Das"
+    val longStr = """This is a
+long string"""
+    var fName: String = "Doug"
+    var lName: String = "Smith"
+    fName = "Sally"
+    var fullName = fName + " "+ lName
+    println("Name: $fullName")
+    println("1 + 2 = ${1+2}")
+    println("String Length: ${longStr.length}")
+    var str1 = "A random string"
+    var str2 = "a random string"
+    println("Strings Equal: ${str1.equals(str2)}")
+    println("Compare A to B: ${"A".compareTo("B")}")
+    println("longStr: $longStr")
 }
