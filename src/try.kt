@@ -51,4 +51,19 @@ long string"""
     println("Index 2-7: ${str1.subSequence(2,8)}")
     println("Contains random: ${str1.contains("random")}")
     println("---------------------------------------------------")
+
+
+//    Array
+    var myArray = arrayOf(1, 123, "Doung")
+    println(myArray[2])
+    myArray[1] = 3.14
+    println("Array Length: ${myArray.size}")
+    println("Doug in Array: ${myArray.contains("Doung")}")
+    var partArray = myArray.copyOfRange(0,1)
+    println("First: ${partArray.first()}")
+    println("Doug Index: ${myArray.indexOf("Doung")}")
+
+    var sqArray = Array(5, { x -> x * x })
+    println("sqArray[2]: ${sqArray[2]}")
+    var arr2: Array<Int> = arrayOf(1, 2, 3)
 }
