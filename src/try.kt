@@ -164,6 +164,13 @@ long string"""
     println("5 * 3 = ${multiply(5,3)}")
 
     println("5! = ${fact(5)}")
+
+    val numList = 1..20
+    val evenList = numList.filter { it % 2 == 0 }
+    evenList.forEach { n -> println(n) }
+
+    val mult3 = makeMathFunc(3)
+    println("5 *3 = ${mult3(5)}")
 }
 
 
@@ -186,3 +193,5 @@ fun fact(x: Int): Int {
     }
     return factTail(x, 1)
 }
+
+fun makeMathFunc(num1: Int): (Int) ->Int = {num2 -> num1 * num2}
