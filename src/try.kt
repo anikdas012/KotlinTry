@@ -226,6 +226,10 @@ long string"""
     list1.removeAt(1)
     list1[1] = 10
     list1.forEach { n -> println("Mutable List: $n")}
+    println("---------------------------------------------------")
+
+
+    
 }
 
 
