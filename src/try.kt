@@ -241,6 +241,11 @@ long string"""
         println("Key: $x Value: $y")
     }
     println("---------------------------------------------------")
+
+
+//    Classes
+    val bowser = Animal("Bowers", 20.0, 13.5)
+    bowser.getInfo()
 }
 
 
@@ -269,5 +274,23 @@ fun makeMathFunc(num1: Int): (Int) ->Int = {num2 -> num1 * num2}
 fun mathOnList(numList: Array<Int>, myFunc: (num: Int) -> Int) {
     for (num in numList) {
         println("MathOnList ${myFunc(num)}")
+    }
+}
+
+
+
+
+open class Animal(val name: String,
+                  var height: Double,
+                  var weight: Double) {
+    init {
+        val regex = Regex(".*\\d+.*")
+        require(!name.matches(regex)) {"Animal name Can't Contain Numbers"}
+        require(height > 0) {"Height must be Greater then 0"}
+        require(weight > 0){"Weight must be Greater then 0"}
+    }
+
+    open fun getInfo(): Unit {
+        println("$name is $height tall and weights $weight")
     }
 }
