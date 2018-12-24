@@ -261,7 +261,24 @@ long string"""
     println("---------------------------------------------------")
 
 
-    
+//    Null safety
+    var nullVal: String? = null
+
+    fun returnNull(): String? {
+        return null
+    }
+
+    var nullVal3 = returnNull()
+    if (nullVal3 != null) {
+        println("${nullVal3.length}")
+    }
+
+    var nullVal4 = nullVal3!!.length
+    println("nullVal4 $nullVal4")
+
+    var nullVal5: String = returnNull() ?: "No Name"
+    println("nullVal5 $nullVal5")
+    println("---------------------------------------------------")
 }
 
 
