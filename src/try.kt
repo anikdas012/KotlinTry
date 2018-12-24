@@ -243,9 +243,16 @@ long string"""
     println("---------------------------------------------------")
 
 
-//    Classes
+//    Classes and Inheritance
     val bowser = Animal("Bowers", 20.0, 13.5)
     bowser.getInfo()
+
+    val spot = Dog("Spot", 20.0, 14.5, "Paul Smith")
+    spot.getInfo()
+    println("---------------------------------------------------")
+
+
+    
 }
 
 
@@ -292,5 +299,15 @@ open class Animal(val name: String,
 
     open fun getInfo(): Unit {
         println("$name is $height tall and weights $weight")
+    }
+}
+
+class Dog(name: String,
+          height: Double,
+          weight: Double,
+          var owner: String): Animal(name, height, weight) {
+
+    override fun getInfo(): Unit {
+        println("$name is $height tall and weight $weight and is owned by $owner")
     }
 }
