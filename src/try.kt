@@ -252,6 +252,15 @@ long string"""
     println("---------------------------------------------------")
 
 
+//    Interface
+    val tweety = Bird("Tweety", true)
+    tweety.fly(10.0)
+
+    val ilish = Fish("Ilish", false)
+    ilish.fly(50.0)
+    println("---------------------------------------------------")
+
+
     
 }
 
@@ -309,5 +318,30 @@ class Dog(name: String,
 
     override fun getInfo(): Unit {
         println("$name is $height tall and weight $weight and is owned by $owner")
+    }
+}
+
+
+
+
+interface Flyable {
+    var flies: Boolean
+    fun fly(distMile: Double): Unit
+}
+
+class Bird constructor(val name: String, override var flies: Boolean = true): Flyable{
+
+    override fun fly(distMile: Double): Unit {
+        if (flies) {
+            println("$name files $distMile miles")
+        }
+    }
+}
+
+class Fish(val name: String, override var flies: Boolean): Flyable {
+    override fun fly(distMile: Double) {
+        if (!flies) {
+            println(":$name swimed $distMile miles")
+        }
     }
 }
