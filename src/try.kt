@@ -178,6 +178,25 @@ long string"""
     println("---------------------------------------------------")
 
 
+//    Collection operators
+    val numList3 = 1..20
+    val listSum = numList3.reduce { x, y -> x + y }
+    println("Reduce Sum: $listSum")
+
+    val listSum2 = numList3.fold(5) {x, y -> x+y }
+    println("Fold Sum: $listSum2")
+
+    println("Evens: ${numList3.any{ it % 2 == 0}}")
+    println("Evens: ${numList3.all { it % 2 ==0 }}")
+
+    val big3 = numList3.filter { it > 3 }
+    big3.forEach { n -> println(">3: $n") }
+
+    val times7 = numList3.map { it * 7 }
+    times7.forEach { n -> println("*7: $n") }
+    println("---------------------------------------------------")
+
+
     
 }
 
