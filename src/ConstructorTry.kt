@@ -1,6 +1,6 @@
 
 fun main(args: Array<String>) {
-    var student = Student("Anik", 14301002)
+    var student = Student("Anik", 14301002, "CSE")
 
     println("Student id is ${student.id} and subject is ${student.subject}")
 }
