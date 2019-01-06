@@ -12,3 +12,7 @@ open class TouchButton(var name: String, override var viewName: String) : View()
         printDetails()
     }
 }
+
+interface ClickListiner {   //This is an Interface
+    fun onClick()
+}
