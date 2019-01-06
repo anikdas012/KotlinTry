@@ -1,5 +1,7 @@
 fun main(args: Array<String>) {
     var touchButton = TouchButton(vN = "View", n = "Bleh_Button")       //instantiating TouchButton class with named parameter
+    println()
+    var button = Button("Bleh", "Bleh_View")       //instantiating Button class
 }
 
 abstract class View {       //This is an Abstract class
@@ -9,7 +11,7 @@ abstract class View {       //This is an Abstract class
 
 open class Button(var name: String, override var viewName: String) : View() {      //This is a Normal class inheriting a Abstract class
     override fun printDetails() {
-        println("In Button class name is $name and View class viewName is $viewName")
+        println("In Button class name is '$name' and View class viewName is '$viewName'")
     }
 
     init {
@@ -29,7 +31,7 @@ class TouchButton(var n: String, var vN: String) : Button(n, vN), ClickListiner 
     }
 
     override fun onClick() {
-        this.printDetails()
+        printDetails()
     }
 
     override fun printDetails() {
