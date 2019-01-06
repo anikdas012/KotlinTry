@@ -18,7 +18,7 @@ interface ClickListiner {   //This is an Interface
     fun onClick()
 }
 
-class TouchButton(var n: String, var vN: String) : Button(n, vN), ClickListiner {
+class TouchButton(var n: String, var vN: String) : Button(n, vN), ClickListiner {       //This is a Normal class having inheriting a class and implementing a interface
     init {
         println("in Init of TouchButton")
         onClick()
