@@ -9,10 +9,26 @@ open class Button(var name: String, override var viewName: String) : View() {   
     }
 
     init {
+        println("in Init of Button")
         printDetails()
     }
 }
 
 interface ClickListiner {   //This is an Interface
     fun onClick()
+}
+
+class TouchButton(var n: String, var vN: String) : Button(n, vN), ClickListiner {
+    init {
+        println("in Init of TouchButton")
+        onClick()
+    }
+
+    override fun onClick() {
+        this.printDetails()
+    }
+
+    override fun printDetails() {
+        println("Clicked on TouchButton")
+    }
 }
