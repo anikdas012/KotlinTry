@@ -1,3 +1,7 @@
+fun main(args: Array<String>) {
+    var touchButton = TouchButton(vN = "View", n = "Bleh_Button")       //instantiating TouchButton class with named parameter
+}
+
 abstract class View {       //This is an Abstract class
     abstract var viewName: String
     abstract fun printDetails()
