@@ -9,11 +9,11 @@ abstract class View {       //This is an Abstract class
 
 open class Button(var name: String, override var viewName: String) : View() {      //This is a Normal class inheriting a Abstract class
     override fun printDetails() {
-        println("In TouchButton class name is $name and View class viewName is $viewName")
+        println("In Button class name is $name and View class viewName is $viewName")
     }
 
     init {
-        println("in Init of Button")
+        println("in Init of Button class")
         printDetails()
     }
 }
@@ -24,7 +24,7 @@ interface ClickListiner {   //This is an Interface
 
 class TouchButton(var n: String, var vN: String) : Button(n, vN), ClickListiner {       //This is a Normal class having inheriting a class and implementing a interface
     init {
-        println("in Init of TouchButton")
+        println("in Init of TouchButton class")
         onClick()
     }
 
